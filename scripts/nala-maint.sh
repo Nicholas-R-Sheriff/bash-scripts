@@ -36,30 +36,28 @@
 export red="\033[1;31m"
 export green="\033[1;32m"
 export yellow="\033[1;33m"
-export blue="\033[1;34m"
 export purple="\033[1;35m"
 export cyan="\033[1;36m"
-export grey="\033[0;37m"
 export reset="\033[m"
 
-echo "$cyan Updating packages sources & Fixing missing dependencies..."
+echo -e "$cyan Updating packages sources & Fixing missing dependencies..."
 sudo apt --fix-missing update -q -y
 
-echo "$yellow Updating packages cache and checking for broken dependencies..."
+echo -e "$yellow Updating packages cache and checking for broken dependencies..."
 sudo apt-get check -y
 
-echo "$yellow Searching for broken packages and reinstalling them..."
+echo -e "$yellow Searching for broken packages and reinstalling them..."
 sudo nala install -fy
 
-echo "$blue Upgrading packages..."
+echo -e "$blue Upgrading packages..."
 sudo nala upgrade -y
 
-echo "$purple Cleaning up apt cache files..."
+echo -e "$purple Cleaning up apt cache files..."
 sudo apt autoclean -q -y
 sudo nala clean
 
-echo "$red Removing packages that are no more required..."
+echo -e "$red Removing packages that are no more required..."
 sudo nala autoremove -y
 
-echo "$green All done."
+echo -e "$green All done."
 exit 0
