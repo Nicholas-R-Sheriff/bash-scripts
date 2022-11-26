@@ -4,23 +4,29 @@
 # `strcmpr` is a stupid-simple command-line and colorized bash script
 # that asks the user to enter two both character or numerical strings.
 
-# Please, place it in your $HOME/.local/bin directory, or in a subfolder
-# thereof. In my opinion, it is where normal user's scripts should reside.
-# Also, please remember to make it executable by running:
-# `sudo chmod +x maintenance`,
-# else you would be stuck in front of your terminal questioning your life,
-# for a long time.
+# Please, place it in your $HOME/.local/bin directory, or in
+# a subfolder thereof. In my opinion, it is where normal user's
+# scripts should reside.
+
+# Also, please remember to make it executable by changing dir.
+# to wherever you placed the script and then by running:
+# `sudo chmod +x strcmpr.sh`,
+# else you would be stuck in front of your terminal questioning
+# your life, for a long time.
 
 # Trivially, based on what you type, outputs the following answers
 
-# - "Strings are equal.", in green, if strings successfully and precisely match to each other;
-# - "String 1 contains string 2.", in yellow, if the second input string partially matchees with the first one;
-# - "String 2 contains string 1.", in cyan, if the first input string partially matches with the second one;
-# - "String 1 is empty!", in purple, if user forgot to enter anything in the first call;
-# - "String 2 is empty!", in purple, if user forgot to enter anything in the second call;
-# - "Strings are different.", in, if strings does not match.
-
-## Have fun.
+# - "Strings are equal.", in green, if strings successfully and
+##		precisely match to each other;
+# - "String 1 contains string 2.", in yellow, if the second input
+##		string partially matchees with the first one;
+# - "String 2 contains string 1.", in cyan, if the first input
+##		string partially matches with the second one;
+# - "String 1 is empty!", in purple, if user forgot to enter
+##		anything in the first call;
+# - "String 2 is empty!", in purple, if user forgot to enter
+##		anything in the second call;
+# - "Strings are different.", in red, if strings do not match.
 
 export red="\033[1;31m"
 export green="\033[1;32m"
