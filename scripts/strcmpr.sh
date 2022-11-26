@@ -6,6 +6,10 @@
 
 # Please, place it in your $HOME/.local/bin directory, or in a subfolder
 # thereof. In my opinion, it is where normal user's scripts should reside.
+# Also, please remember to make it executable by running:
+# `sudo chmod +x maintenance`,
+# else you would be stuck in front of your terminal questioning your life,
+# for a long time.
 
 # Trivially, based on what you type, outputs the following answers
 
